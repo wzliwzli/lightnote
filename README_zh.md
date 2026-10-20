@@ -10,6 +10,8 @@
 [![License](https://img.shields.io/badge/license-MIT-4FC1A6)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-4FC1A6)](#被-windows-拦住了)
 
+![悬浮窗](docs/17-float.png)
+
 ## 下载
 
 在 [Releases](https://github.com/wzliwzli/lightnote/releases/latest) 里下 `Lightnote-win64-v1.3.zip`（约 390 KB），解压到任意文件夹，双击 `Lightnote.exe`。
@@ -29,6 +31,13 @@
 关窗口只是藏进托盘，真要退出在托盘菜单里点「退出轻笺」。托盘图标双击能叫回来。
 
 几件小事：`Enter` 保存，`#标签` 直接写在标题里（可以写多个），悬停卡片右边有一排小图标 —— 便签是备注，日历是日期和重复，图钉置顶，沙漏开始专注，垃圾桶删除（5 秒内能撤销）。
+
+| | |
+| --- | --- |
+| ![悬停操作条](docs/03-hover.png) | ![专注 + 迷你](docs/14-mini-focus.png) |
+| 悬停出操作条 | 迷你模式里的专注倒计时 |
+| ![设置](docs/08-settings.png) | ![深色](docs/10-dark.png) |
+| 设置 | 深色模式 |
 
 ## 语法
 

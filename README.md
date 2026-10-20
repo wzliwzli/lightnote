@@ -10,6 +10,8 @@ It picked up a few features along the way (tags, repeating tasks, a pomodoro tim
 [![License](https://img.shields.io/badge/license-MIT-4FC1A6)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-4FC1A6)](#blocked-by-windows)
 
+![floating window](docs/17-float.png)
+
 ## Download
 
 Grab `Lightnote-win64-v1.3.zip` (about 390 KB) from [Releases](https://github.com/wzliwzli/lightnote/releases/latest), unzip it anywhere, and double-click `Lightnote.exe`.
@@ -29,6 +31,13 @@ Clicking the arrow at the top-right of the widget expands it into the full windo
 Closing the window only hides it to the tray; to really quit, pick 退出轻笺 (Quit) from the tray menu. Double-clicking the tray icon brings it back.
 
 A few smaller things: `Enter` saves, `#tag` can be typed straight into the title (several are fine), and hovering a card shows a row of icons on the right — note for a remark, calendar for due date and repeat, pin to keep it on top, hourglass to start a focus session, trash to delete (undoable within 5 seconds).
+
+| | |
+| --- | --- |
+| ![Hover operation bar](docs/03-hover.png) | ![Focus + Mini](docs/14-mini-focus.png) |
+| Hover out the operation bar | Focus Countdown in Mini Mode |
+| ![Settings](docs/08-settings.png) | ![Dark Mode](docs/10-dark.png) |
+| Settings | Dark Mode |
 
 ## Syntax
 
