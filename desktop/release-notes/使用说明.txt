@@ -19,12 +19,34 @@
    点窗口上的 × 只是隐藏到托盘，不是退出。
 
 
+被 Windows 拦住了？
+-------------------
+
+这个 exe 没有购买代码签名证书，从网上下载后被 Windows SmartScreen 标记为
+"未知发布者"是正常现象，不是病毒提示。
+
+放行方法，二选一：
+
+  A. 右键 Lightnote.exe → 属性 → 底部勾选「解除锁定」→ 确定，然后再双击
+  B. 双击后点提示框里的「更多信息」→「仍要运行」
+
+如果公司电脑策略不允许放行，直接用浏览器打开 web\index.html 也能用，
+功能完全一样，只是没有悬浮窗和托盘常驻。
+
+校验文件有没有损坏：PowerShell 里执行
+  Get-FileHash .\Lightnote-win64-v1.3.zip -Algorithm SHA256
+和 SHA256SUMS.txt 里的值对一下即可。
+
+遇到杀毒软件误报，可以把这个文件上传到 https://www.virustotal.com 看看，
+或者直接在 GitHub 仓库提 issue：https://github.com/wzliwzli/lightnote/issues
+
+
 两种窗口
 --------
 
 悬浮窗（默认）
   - 拖标题栏移动，拖四条边调整大小，位置和尺寸会记住
-  - 点 × 右上角的 ⤢ 展开成完整窗口
+  - 点右上角的 ⤢ 展开成完整窗口
   - 透明度可调（设置 → 悬浮窗透明度），完整窗口始终不透明
 
 完整窗口
@@ -48,18 +70,6 @@
 保存备注 Ctrl Enter
 
 
-快捷键一览
-----------
-
-Enter        保存 / 新建
-Esc          取消编辑、关闭面板、清空搜索
-Ctrl K       搜索
-Ctrl M       收起 / 展开窗口
-Ctrl Z       撤销删除
-Ctrl Enter   保存备注
-双击标题      就地编辑
-
-
 数据存在哪
 ----------
 
@@ -77,12 +87,6 @@ Ctrl Enter   保存备注
 
 Windows 10 1803 及以上 / Windows 11。
 用的是系统自带的 WebView2 运行时（Win11 和大多数 Win10 都已预装）。
-如果打不开并提示缺少 WebView2，装一下微软的
-"Microsoft Edge WebView2 Runtime"（免费，搜这个名字即可）。
+如果提示缺少 WebView2，装一下微软的 "Microsoft Edge WebView2 Runtime"。
 
-
-重新打包（开发者）
-------------------
-
-项目里执行：scripts\build-desktop.cmd
-需要 Node + .NET Framework 自带的 csc.exe，首次要联网下载 WebView2 SDK。
+项目主页：https://github.com/wzliwzli/lightnote

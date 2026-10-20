@@ -11,6 +11,16 @@ using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.WinForms;
 
+// 程序集信息：会写进 exe 的 Win32 版本资源，文件属性里能看到，也有助于降低安全软件的误报
+[assembly: AssemblyTitle("轻笺 Lightnote")]
+[assembly: AssemblyDescription("轻量、清爽、本地优先的桌面待办")]
+[assembly: AssemblyProduct("轻笺 Lightnote")]
+[assembly: AssemblyCompany("wzliwzli")]
+[assembly: AssemblyCopyright("Copyright © 2025 wzliwzli")]
+[assembly: AssemblyVersion("1.3.0.0")]
+[assembly: AssemblyFileVersion("1.3.0.0")]
+[assembly: AssemblyInformationalVersion("1.3.0")]
+
 namespace Lightnote
 {
     internal static class Program
