@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN" data-mode="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>轻笺 · Lightnote</title>
+    <script>
+      // 首帧前先把主题落地，避免刷新时闪白
+      try {
+        var raw = localStorage.getItem('lightnote.theme.v1')
+        var s = raw ? JSON.parse(raw) : null
+        var mode = (s && s.mode) || 'light'
+        var dark = mode === 'system'
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : mode === 'dark'
+        document.documentElement.dataset.mode = dark ? 'dark' : 'light'
+        if (s && s.brand) {
+          document.documentElement.style.setProperty('--brand', s.brand)
+          document.documentElement.style.setProperty('--brand-base', s.brand)
+          if (s.radius) document.documentElement.style.setProperty('--radius-card', s.radius + 'px')
+          if (s.fontSize) document.documentElement.style.setProperty('--fs-base', s.fontSize + 'px')
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

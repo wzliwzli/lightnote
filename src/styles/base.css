@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+kbd {
+  font-family: var(--font-ui);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--brand) 26%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--brand) 68%, transparent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* 细滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--text-faint) 32%, transparent);
+  border: 3px solid transparent;
+  border-radius: 99px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--text-faint) 55%, transparent);
+  background-clip: content-box;
+}
+
+/* 换主题时只过渡颜色，避免和 hover / 位移动画打架 */
+html.is-theming,
+html.is-theming *,
+html.is-theming *::before,
+html.is-theming *::after {
+  transition:
+    background-color 0.34s var(--ease-out),
+    color 0.34s var(--ease-out),
+    border-color 0.34s var(--ease-out),
+    box-shadow 0.34s var(--ease-out),
+    fill 0.34s var(--ease-out),
+    stroke 0.34s var(--ease-out) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

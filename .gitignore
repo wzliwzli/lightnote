@@ -1,0 +1,18 @@
+# 依赖
+node_modules/
+
+# 构建产物（由 npm run build / scripts\build-desktop 生成）
+dist/
+desktop/build/
+release/
+
+# 本地缓存（build-desktop 会自动重新下载 WebView2 SDK）
+desktop/.cache/
+.preview/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.local
